@@ -14,8 +14,7 @@
     "cypress",
     "testautomation",
     "nodejs",
-    "javascript",
-    "pom"
+    "javascript"
   ],
   "author": "Isabel Gonzalez",
   "license": "MIT"
