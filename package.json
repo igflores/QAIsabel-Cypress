@@ -14,11 +14,15 @@
     "cypress",
     "testautomation",
     "nodejs",
-    "javascript"
+    "javascript",
+    "pom"
   ],
   "author": "Isabel Gonzalez",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "13.6.0"
+  },
+  "devDependencies": {
+    "cypress-plugin-api": "2.11.1"
   }
 }
