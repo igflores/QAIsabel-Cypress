@@ -18,5 +18,8 @@
     "pom"
   ],
   "author": "Isabel Gonzalez",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^13.6.0"
+  }
 }
