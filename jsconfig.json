@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "types": ["cypress", "node"],   //Dependencies
+		"baseUrl": ".",
+		"paths": {
+			"@pages/*": ["./cypress/support/pages/*"],
+			"@util/*": ["./cypress/support/utils/*"],
+			"@data/*": ["./cypress/fixtures/data/*"],
+		}
+	},
+	"exclude": ["node_modules"],
+}
