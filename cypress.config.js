@@ -18,7 +18,7 @@ export default defineConfig({
       // implement node event listeners here
     },
     env: {
-      baseUrlDemoQA: 'https://xxx',
+      baseUrlDemoQA: 'https://demoqa.com',
       baseUrlSawglab: 'https://xxx',
     }
   },
