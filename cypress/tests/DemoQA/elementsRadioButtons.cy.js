@@ -1,13 +1,13 @@
 import { removeLogs } from '../../support/utils/RemoveLogs';
 
-//* Test Set:
+//* ----------------------- TEST SET -----------------------------------------------------------------------
 describe('🪶ToolsQA | Elements | Radio Buttons', () => {
 	beforeEach('Precondición: Estar ubicado en Radio Button Page', () => {
-		const endpoint = '/radio-button'; //variable para guardar el endpoint
-		cy.visit(`${Cypress.env('baseUrlDemoQA')}/radio-button`); //navegar
+		cy.visit(`${Cypress.env('baseUrlDemoQA')}/radio-button`);
+		cy.url().should('contain', 'radio-button');
 	});
 
-	//todo: Test Cases
+//* ----------------------- TEST CASES -----------------------------------------------------------------------
 	it('GX-29820 | TC01: Validar visualizar el label "Yes" cuando se selecciona el radio-button "Yes"', () => {
 		cy.get('#yesRadio').click({ force: true });
 		cy.contains('You have selected').children().should('have.text', 'Yes');

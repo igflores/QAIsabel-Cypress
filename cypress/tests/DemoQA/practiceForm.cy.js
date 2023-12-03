@@ -1,12 +1,14 @@
 import { removeLogs } from '../../support/utils/RemoveLogs';
 import { practiceForm } from '../../support/pages/DemoQA/practiceForm';
 
+//* ----------------------- TEST SET -----------------------------------------------------------------------
 describe('GX-34872 | ✅ToolsQA | Forms | Practice Form', () => {
 	beforeEach('Precondition: to use the Practice Form', () => {
-		cy.visit('https://demoqa.com/automation-practice-form');
+		cy.visit(`${Cypress.env('baseUrlDemoQA')}/automation-practice-form`);
 		cy.url().should('contain', 'practice-form');
 	});
 
+//* ----------------------- TEST CASES -----------------------------------------------------------------------
 	it('GX-34871 | TC01: Validate that a popup displays all the valid data', () => {
 		const formData = practiceForm.fillAndGetInputData();
 		const check = [
