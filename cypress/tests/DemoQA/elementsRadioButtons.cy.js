@@ -13,7 +13,7 @@ describe('🪶ToolsQA | Elements | Radio Buttons', () => {
 		cy.contains('You have selected').children().should('have.text', 'Yes');
 	});
 
-	it('GX-29820 | TC02: Validar visualizar el label “Impressive” cuando se selecciona el radio-button "Impressive"', () => {
+	it.only('GX-29820 | TC02: Validar visualizar el label “Impressive” cuando se selecciona el radio-button "Impressive"', () => {
 		cy.get('#impressiveRadio').click({ force: true });
 		cy.contains('You have selected').children().should('have.text', 'Impressive');
 	});

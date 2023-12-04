@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-class practiceFormPage {
+class PracticeFormPage {
 	// * Constructor
 	get = {
 		firstNameInput: () => cy.get('#firstName'),
@@ -205,4 +205,4 @@ class practiceFormPage {
 	}
 }
 
-export const practiceForm = new practiceFormPage();
+export const practiceFormPage = new PracticeFormPage();
