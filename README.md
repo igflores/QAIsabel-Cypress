@@ -28,8 +28,9 @@ npm test
 ```bash
 npm run file */**/<filename>
 ```
+
 Where the variable "file" is:
-```
+```bash
 `cypress run --browser chrome --reporter cypress-multi-reporters --reporter-options configFile=jsconfig.json --record --key {key} --spec`
 ```
 Which is a shortcut to run tests from a specified directory using the Chrome browser, generating an XML report for Jira import, an HTML report for display, and additionally updating the Cypress Project Dashboard.
