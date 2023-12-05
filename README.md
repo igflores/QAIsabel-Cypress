@@ -41,9 +41,9 @@ git clone git@github.com:igflores/QAIsabel-Cypress.git
 ```bash
 npm ci
 ```
-```plaintext
-"npm ci is a preferred option for CI/CD environments where a fast and consistent installation of dependencies is sought, especially when working with lock files (package-lock.json or npm-shrinkwrap.json).
-```
+
+>"npm ci is a preferred option for CI/CD environments where a fast and consistent installation of dependencies is sought, especially when working with lock files (package-lock.json or npm-shrinkwrap.json).
+
 
 ### **3.** To open the Cypress app, run the command
 ```bash
