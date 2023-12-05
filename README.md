@@ -61,7 +61,7 @@ These are the dependencies used in this project:
   },
 ```
 
-## ✨ Running tests and generating reports with Allure <<<-----
+## 🚩 Running tests and generating reports with Allure <<<-----
 To run the tests and take advantage of the integration with Allure:
 
 **1.** **Ejecuta tus pruebas con Cypress:**
