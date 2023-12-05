@@ -1,6 +1,6 @@
 # 🧪 Testing Automation - Cypress 13 | Isabel Gonzalez's personal repository for testing practices
 
-## Project structure
+## ✨ Project structure
 ```plaintext
 .
 ├── crearTest.sh
@@ -32,7 +32,7 @@
 
 ## 📦 Instalación y configuración
 
-### **1.** **Clona el repositorio**
+### **1.** **Clone the repository**
 ```bash
 git clone git@github.com:igflores/QAIsabel-Cypress.git
 ```
@@ -41,15 +41,16 @@ git clone git@github.com:igflores/QAIsabel-Cypress.git
 ```bash
 npm ci
 ```
-
-*The "ci" command is for installing all locked project dependencies
+```plaintext
+"npm ci is a preferred option for CI/CD environments where a fast and consistent installation of dependencies is sought, especially when working with lock files (package-lock.json or npm-shrinkwrap.json).
+```
 
 ### **3.** To open the Cypress app, run the command
 ```bash
 npm test
 ```
 
-## Used Dependencies
+## ✨ Used Dependencies
 These are the dependencies used in this project:
 ```json
 "devDependencies": {
@@ -60,7 +61,7 @@ These are the dependencies used in this project:
   },
 ```
 
-## Running tests and generating reports with Allure <<<-----
+## ✨ Running tests and generating reports with Allure <<<-----
 To run the tests and take advantage of the integration with Allure:
 
 **1.** **Ejecuta tus pruebas con Cypress:**
