@@ -1,6 +1,6 @@
 # 🧪 Testing Automation - Cypress 13 | Isabel Gonzalez's personal repository for testing practices
 
-## ✨ Project structure
+## Project structure
 ```plaintext
 .
 ├── crearTest.sh
