@@ -19,11 +19,11 @@ export default defineConfig({
     },
     env: {
   // --------------- DemoQA SUT ----------------------------------------------------------------//
-      baseUrlDemoQA: 'https://www.saucedemo.com',
+      baseUrlDemoQA: 'https://demoqa.com',
+      baseUrlSawglab: 'https://www.saucedemo.com',
   
       // --------------- Sawg lab SUT ----------------------------------------------------------//
       SawglabSUT: {
-            baseUrlSawglab: 'https://www.saucedemo.com',
             endpoint: {
               inventory: '/inventory.html',
               cart: '/cart.html',
