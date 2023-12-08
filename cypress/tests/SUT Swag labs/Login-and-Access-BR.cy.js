@@ -1,25 +1,25 @@
 import { loginSwagLabsPage } from '../../support/pages/Swag labs/LoginAndAccessBRPage';
 
-const { baseUrlDemoQA } = Cypress.env(); //para acceder a la propiedad de "baseUrl" (ver archivo cypress.config.js)
-const { login: loginProperties, endpoint } = Cypress.env('SawglabSUT'); // significa loginProperties = Cypress.env('swagLabs').login
+const { baseUrlSawglab } = Cypress.env();
+const { login: loginProperties, endpoint } = Cypress.env('SawglabSUT'); //-> loginProperties = Cypress.env('swagLabs').login
 
 const fillLoginFormAndGetErrorMessage = (userName, password, errorMessage) => {
 	loginSwagLabsPage.Login(userName, password);
-	cy.url().should('contain', baseUrlDemoQA);
+	cy.url().should('contain', baseUrlSawglab);
 	if (errorMessage !== undefined) {
 		loginSwagLabsPage.get.errorMessageDisplay().should('contain', errorMessage);
 	}
 };
 
 const visitInvalidEndpoint = (endpoint, errorMessage) => {
-    cy.visit(baseUrlDemoQA + endpoint, { failOnStatusCode: false });
-	cy.url().should('contain', baseUrlDemoQA);
+    cy.visit(baseUrlSawglab + endpoint, { failOnStatusCode: false });
+	cy.url().should('contain', baseUrlSawglab);
 	loginSwagLabsPage.get.errorMessageDisplay().should('contain', errorMessage);
 };
 
 describe('GX3-385 | SwagLabs | Account | Login and sccessBR', () => {
 	beforeEach('Preconditions: ', () => {
-		cy.visit(baseUrlDemoQA);
+		cy.visit(baseUrlSawglab);
 		cy.url().should('contain', 'saucedemo.com');
 	});
 
