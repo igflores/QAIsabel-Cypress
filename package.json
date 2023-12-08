@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/node": "20.10.2",
     "cypress": "13.6.0",
+    "cypress-file-upload": "5.0.8",
     "cypress-plugin-api": "2.11.1"
   },
   "type": "module",
