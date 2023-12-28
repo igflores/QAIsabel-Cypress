@@ -1,0 +1,40 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code, and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Cypress CI/CD Testing
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+#* It ensures that the GitHub Actions workflow is triggered when there are pushes to the "main" branch 
+#* and when pull requests are opened or updated against the "main" branch.
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    #* It specifies that the GitHub Actions workflow will run on the Windows operating system using the latest available version.
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v3
+      #* Checkout" ensures the repository's source code is available in the GitHub Actions environment by cloning it. 
+      #* This allows subsequent workflow steps, such as building and running tests, to operate on the code.
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      #* Sets up the Node.js environment with version 18 for the GitHub Actions workflow.
+
+      - name: Installing dependencies
+        run: |
+          npm ci
+          npm list
+      #* Installs the project dependencies 
+      #* then lists them to provide visibility into which packages are installed in the execution environment of the GitHub Actions workflow.
+      
+      - run: npm run build --if-present
+      - run: npm test
