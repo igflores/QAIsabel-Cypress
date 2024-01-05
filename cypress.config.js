@@ -21,8 +21,9 @@ export default defineConfig({
   // --------------- DemoQA SUT ----------------------------------------------------------------//
       baseUrlDemoQA: 'https://demoqa.com',
       baseUrlSawglab: 'https://www.saucedemo.com',
+      baseUrlPaypal: 'https://vendercomprardolares.com/calculadora-comisiones-paypal.php',
   
-      // --------------- Sawg lab SUT ----------------------------------------------------------//
+  // --------------- Sawg lab SUT ----------------------------------------------------------//
       SawglabSUT: {
             endpoint: {
               inventory: '/inventory.html',
