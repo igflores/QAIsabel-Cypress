@@ -4,7 +4,8 @@
   "description": "Personal repository",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "regression:test": "cypress run"
   },
   "repository": {
     "type": "git",
