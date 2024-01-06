@@ -1,11 +1,11 @@
-name: Cypress CI/CD Testing by Isabel Gonzalez
+name: 🤖 Cypress Sanity Test by Isabel Gonzalez
 
 on:
   push:
-    branches: [ "main" ]
+    branches-ignore: [ "main" ]
 
 jobs:
-    RegressionTest:
+    SanityTest:
         runs-on: ubuntu-latest
 
         steps:
@@ -29,4 +29,4 @@ jobs:
               with:
                   browser: chrome
                   command: | #EDITAR AQUÍ EL ARCHIVO SUITE A EJECUTAR:
-                    npm run regression:test
+                    npm run file cypress/tests/SUT-DemoQA/elementsRadioButtons.cy.js
