@@ -1,0 +1,31 @@
+name: Cypress CI/CD Testing by Isabel Gonzalez
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+    RegressionTest:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 💻Checkout
+              uses: actions/checkout@v3
+
+            - name: 💿Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: 💿Install dependencies
+              run: |
+                  npm ci
+                  npm list
+                  npx cypress cache list
+
+            - name: 🧪Cypress Run Regression Test
+              uses: cypress-io/github-action@v4
+              with:
+                  browser: chrome
+                  command: | #EDITAR AQUÍ EL ARCHIVO SUITE A EJECUTAR:
+                    npm run regression:test
